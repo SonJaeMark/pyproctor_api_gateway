@@ -225,7 +225,7 @@ Copy [.env.example](.env.example) and set the following values:
 | `JWT_ISSUER` | No | `pyproctor-auth-service` | Optional required JWT issuer. |
 | `AUTH_SERVICE_URL` | Recommended | Default auth service URL | Authentication upstream base URL. |
 | `EXAM_SERVICE_URL` | For exams | Empty | Exam upstream base URL. |
-| `GRADING_SERVICE_URL` | For grading | Empty | Grading upstream base URL. |
+| `GRADING_SERVICE_URL` | For grading | `https://grade-service-xh1l.onrender.com` | Grading upstream base URL. |
 | `RESULTS_SERVICE_URL` | For results | Empty | Results upstream base URL. |
 | `GATEWAY_INTERNAL_SECRET` | Recommended | Empty | Shared secret sent to upstream services. |
 | `AUTH_RATE_LIMIT_REQUESTS` | No | `15` | Authentication requests allowed per window. |
