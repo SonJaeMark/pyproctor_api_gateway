@@ -109,8 +109,9 @@ AUTH_SERVICE_URL = os.environ.get(
     "AUTH_SERVICE_URL", "https://auth-service-33w4.onrender.com"
 )
 EXAM_SERVICE_URL = os.environ.get("EXAM_SERVICE_URL", "")
-GRADING_SERVICE_URL = os.environ.get(
-    "GRADING_SERVICE_URL", "https://grade-service-xh1l.onrender.com"
+GRADING_SERVICE_URL = (
+    os.environ.get("GRADING_SERVICE_URL", "").strip()
+    or "https://grade-service-xh1l.onrender.com"
 )
 RESULTS_SERVICE_URL = os.environ.get("RESULTS_SERVICE_URL", "")
 GATEWAY_INTERNAL_SECRET = os.environ.get("GATEWAY_INTERNAL_SECRET", "")

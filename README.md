@@ -44,7 +44,7 @@ Example system-health response:
   "services": {
     "auth": "UP",
     "exam": "UP",
-    "grading": "NOT_CONFIGURED",
+    "grading": "UP",
     "results": "UP"
   },
   "timestamp": "2026-11-25T00:07:49Z"
