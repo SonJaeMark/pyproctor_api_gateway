@@ -16,6 +16,7 @@ HOP_BY_HOP_HEADERS = {
     "upgrade",
     "host",
     "content-length",
+    "accept-encoding",
 }
 
 
@@ -66,6 +67,7 @@ def forward_request(request, service_key: str, identity=None) -> HttpResponse:
     # Attach trusted gateway metadata (never trust client-supplied identity headers)
     outbound_headers["X-Request-ID"] = request_id
     outbound_headers["X-Forwarded-By"] = "pyproctor-api-gateway"
+    outbound_headers["Accept-Encoding"] = "identity"
 
     internal_secret = getattr(settings, "GATEWAY_INTERNAL_SECRET", "")
     if internal_secret:
